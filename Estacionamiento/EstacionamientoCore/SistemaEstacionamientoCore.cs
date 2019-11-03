@@ -37,7 +37,7 @@
                     IdAuto = 1000,
                     Patente = "ORMR445",
                     Marca = "Renault",
-                    Modelo = "HR-V",
+                    Modelo = "Kangoo",
                     Empleado = "Empleado 2"
                 });
                 listAutos.Add(new AutoBase
@@ -70,7 +70,7 @@
                     Nombre = "Micaela",
                     Apellido = "Perez",
                     Edad = 24,
-                    NroCelular = ""
+                    NroCelular = "45341223"
                 });
                 listEmpleados.Add(new EmpleadoBase
                 {

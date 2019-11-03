@@ -30,11 +30,11 @@
                 <td>@sist.Edad</td>
                 <td>@sist.NroCelular</td>
                 <td>
-                    <a class="btn-primary" href="~/Home/ViewEditarEmpleado/@sist.IdEmpleado" title="Editar">
+                    <a class="btn btn-primary" href="~/Home/ViewEditarEmpleado/@sist.IdEmpleado" title="Editar">
                         <i class="glyphicon glyphicon-pencil"></i>
                     </a>
-                    <a class="btn-primary" title="Eliminar">
-                        <i class="glyphicon glyphicon-pencil"></i>
+                    <a class="btn btn-danger" href="~/Home/ViewEliminarEmpleado/@sist.IdEmpleado" title="Eliminar">
+                        <i class="glyphicon glyphicon-minus"></i>
                     </a>
                 </td>
             </tr>
@@ -42,8 +42,8 @@
         </tbody>
     </table>
     <div>
-        <a class="btn-primary" href="~/Home/ViewCrearEmpleado" title="Crear">
-            <i class="glyphicon glyphicon-pencil"></i>
+        <a class="btn btn-success" href="~/Home/ViewCrearEmpleado" title="Crear">
+            Agregar Empleado
         </a>
     </div>
 }

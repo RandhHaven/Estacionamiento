@@ -81,7 +81,7 @@ namespace Estacionamiento.Controllers
         }
 
         [HttpGet]
-        public ActionResult ViewEditarEmpleado()
+        public ActionResult ViewEditarEmpleado(int idEmpleado)
         {
             try
             {
@@ -108,8 +108,22 @@ namespace Estacionamiento.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult ViewEliminarEmpleado(int idEmpleado)
+        {
+            try
+            {
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+                throw ex;
+            }
+            return View();
+        }
+
         [HttpGet]
-        public ActionResult ViewEditarAuto()
+        public ActionResult ViewEditarAuto(int idAuto)
         {
             try
             {
@@ -124,6 +138,20 @@ namespace Estacionamiento.Controllers
 
         [HttpGet]
         public ActionResult ViewCrearAuto()
+        {
+            try
+            {
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+                throw ex;
+            }
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult ViewEliminarAuto(int IdAuto)
         {
             try
             {
