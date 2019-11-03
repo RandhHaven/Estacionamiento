@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="50dd13c6-09e4-4644-bea7-b15fb707001d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:51090/EstacionamientoService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EstacionamientoService.xsd" MetadataType="Schema" ID="576b4fd3-af2a-4b28-bab3-b91174731014" SourceId="1" SourceUrl="http://localhost:51090/EstacionamientoService.svc?xsd=xsd2" />
+    <MetadataFile FileName="EstacionamientoService1.xsd" MetadataType="Schema" ID="fd83c43a-f8d5-4379-be62-669d3aa6fc4f" SourceId="1" SourceUrl="http://localhost:51090/EstacionamientoService.svc?xsd=xsd1" />
+    <MetadataFile FileName="EstacionamientoService.wsdl" MetadataType="Wsdl" ID="fa37e90f-d678-4b1b-a483-3079e8d3c9cc" SourceId="1" SourceUrl="http://localhost:51090/EstacionamientoService.svc?wsdl" />
+    <MetadataFile FileName="EstacionamientoService.disco" MetadataType="Disco" ID="5812e133-cce0-4de2-bbbb-51ab24fe99f6" SourceId="1" SourceUrl="http://localhost:51090/EstacionamientoService.svc?disco" />
+    <MetadataFile FileName="EstacionamientoService2.xsd" MetadataType="Schema" ID="59cd8447-5647-4cba-bcc4-ce47b7443f16" SourceId="1" SourceUrl="http://localhost:51090/EstacionamientoService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
