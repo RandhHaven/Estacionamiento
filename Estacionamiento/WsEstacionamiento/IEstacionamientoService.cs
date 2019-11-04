@@ -19,7 +19,23 @@ namespace WsEstacionamiento
 
         [OperationContract]
         string GetListadoEmpleados();
+        [OperationContract]
+        string CrearAuto();
 
+        [OperationContract]
+        string EliminarAuto(int idAuto);
+
+        [OperationContract]
+        string EditarAuto(int idAuto);
+
+        [OperationContract]
+        string CrearEmpleado();
+
+        [OperationContract]
+        string EliminarEmpleado(int idEmpleado);
+
+        [OperationContract]
+        string EditarEmpleado(int idEmpleado);
         // TODO: Add your service operations here
     }
 

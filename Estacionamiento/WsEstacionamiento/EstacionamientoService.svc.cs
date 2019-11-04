@@ -24,6 +24,36 @@ namespace WsEstacionamiento
             return SerializationHelper.SerializeToBinaryString(new SistemaEstacionamientoCore().GetListadoEmpleados());
         }
 
+        public string CrearAuto()
+        {
+            return SerializationHelper.SerializeToBinaryString(new SistemaEstacionamientoCore().CrearAuto());
+        }
+
+        public string EliminarAuto(int idAuto)
+        {
+            return SerializationHelper.SerializeToBinaryString(new SistemaEstacionamientoCore().EliminarAuto(idAuto));
+        }
+
+        public string EditarAuto(int idAuto)
+        {
+            return SerializationHelper.SerializeToBinaryString(new SistemaEstacionamientoCore().EditarAuto(idAuto));
+        }
+
+        public string CrearEmpleado()
+        {
+            return SerializationHelper.SerializeToBinaryString(new SistemaEstacionamientoCore().CrearEmpleado());
+        }
+
+        public string EliminarEmpleado(int idEmpleado)
+        {
+            return SerializationHelper.SerializeToBinaryString(new SistemaEstacionamientoCore().EliminarEmpleado(idEmpleado));
+        }
+
+        public string EditarEmpleado(int idEmpleado)
+        {
+            return SerializationHelper.SerializeToBinaryString(new SistemaEstacionamientoCore().EditarEmpleado(idEmpleado));
+        }
+
         public CompositeType GetDataUsingDataContract(CompositeType composite)
         {
             if (composite == null)

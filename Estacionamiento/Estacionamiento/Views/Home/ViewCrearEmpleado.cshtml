@@ -1,28 +1,20 @@
 ﻿@model Estacionamiento.Models.Empleado
 @{
-    ViewData["Title"] = "ViewEditarEmpleados";
+    ViewData["Title"] = "ViewCrearEmpleado";
 }
 
-<h1>ViewEditarEmpleados</h1>
+<h1>ViewCrearEmpleado</h1>
 
-@using (Html.BeginForm("ViewEditarEmpleado", "Home", FormMethod.Post))
+@using (Html.BeginForm("ViewCrearEmpleado", "Home", FormMethod.Get))
 {
     <div class="row pt-5">
         <div class="col-md-2"></div>
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    <h4> Editar Empleado </h4>
+                    <h4> Crear Empleado </h4>
                 </div>
-                <form id="login-form" class="card-body container">
-                    <div class="row pt-2">
-                        <div class="col-md-2">
-                            @Html.LabelForModel("Id. Empleado: ", new { @class = "control-label" })
-                        </div>
-                        <div class="col-md-4">
-                            @Html.TextBoxFor(m => m.IdEmpleado, new { @class = "form-control width=100%;", @readonly = "readonly"})
-                        </div>
-                    </div>
+                <form id="login-form" class="card-body container">                    
                     <div class="row pt-2">
                         <div class="col-md-2">
                             @Html.LabelForModel("Legajo: ", new { @class = "control-label" })
@@ -55,11 +47,11 @@
                             @Html.ValidationMessageFor(m => m.Apellido, "Ingrese el Apellido.", new { @class = "text-danger" })
                         </div>
                     </div>
-                    
+
                     <div class="row d-print-table-row">
                         <div class="col-md-4"> </div>
                         <div class="col-md-4">
-                            <input class="btn-primary d-block form-control" ; type="submit" name="btnSubmit" value="Editar Empleado" />
+                            <input class="btn-primary d-block form-control" ; type="submit" name="btnSubmit" value="Crear Empleado" />
                         </div>
                         <div class="col-md-4"> </div>
                     </div>
@@ -68,5 +60,4 @@
         </div>
         <div class="col-md-2"></div>
     </div>
-
 }

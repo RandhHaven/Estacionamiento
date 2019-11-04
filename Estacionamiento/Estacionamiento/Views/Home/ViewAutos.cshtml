@@ -7,7 +7,7 @@
 @using (Html.BeginForm("ViewAutos", "Home", FormMethod.Get))
 {
     <div>
-        <h1> Sistema Meteorologico </h1>
+        <h1> Listado de Autos </h1>
     </div>
     <table class="table table-striped">
         <thead>
@@ -28,11 +28,11 @@
                     <td>@sist.Modelo</td>
                     <td>@sist.Empleado</td>
                     <td>
-                        <a class="btm btn-primary" href="~/Home/ViewEditarAuto/@sist.IdAuto" title="Editar">
-                            <i class="glyphicon glyphicon-pencil"></i>
-                        </a>
+                        <a class="btn btn-primary" href="~/Home/ViewEditarAuto/@sist.IdAuto" title="Editar">
+                            Editar <i class="glyphicon glyphicon-pencil"></i>
+                        </a>                       
                         <a class="btn btn-danger" href="~/Home/ViewEliminarAuto/@sist.IdAuto" title="Eliminar">
-                            <i class="glyphicon glyphicon-minus"></i>
+                            Eliminar  <i class="glyphicon glyphicon-minus"></i>
                         </a>
                     </td>
                 </tr>
@@ -40,7 +40,9 @@
         </tbody>
     </table>
     <div>
-        <input class="btn btn-success d-block col-lg-3 form-control"; type="submit" name="btnSubmit" value="Agregar Auto" />
+        <a class="btn btn-success" href="~/Home/ViewCrearAuto" title="Crear">
+            Agregar Auto
+        </a>
     </div>
 }
 

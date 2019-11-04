@@ -126,6 +126,82 @@
                 throw ex;
             }
         }
+
+        public void CrearAuto()
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
+        public void EliminarAuto(int idAuto)
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+        public void EditarAuto(int idAuto)
+        {            
+            try
+            {
+                
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            
+        }
+
+        public void CrearEmpleado()
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
+        public void EliminarEmpleado(int idEmpleado)
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+        public void EditarEmpleado(int idEmpleado)
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
         #endregion
     }
 }

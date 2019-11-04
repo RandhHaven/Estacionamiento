@@ -34,7 +34,7 @@
                 });
                 listAutos.Add(new AutoBase
                 {
-                    IdAuto = 1000,
+                    IdAuto = 1001,
                     Patente = "ORMR445",
                     Marca = "Renault",
                     Modelo = "Kangoo",
@@ -42,11 +42,27 @@
                 });
                 listAutos.Add(new AutoBase
                 {
-                    IdAuto = 1000,
+                    IdAuto = 1002,
                     Patente = "XCE984",
                     Marca = "Chevrolet",
                     Modelo = "Prisma",
                     Empleado = "Empleado 3"
+                });
+                listAutos.Add(new AutoBase
+                {
+                    IdAuto = 1003,
+                    Patente = "MUJ234",
+                    Marca = "Chevrolet",
+                    Modelo = "Cruze",
+                    Empleado = "Empleado 4"
+                });
+                listAutos.Add(new AutoBase
+                {
+                    IdAuto = 1004,
+                    Patente = "ORZ903",
+                    Marca = "Fiat",
+                    Modelo = "Punto",
+                    Empleado = "Empleado 5"
                 });
             }
             catch (Exception ex)
@@ -74,7 +90,7 @@
                 });
                 listEmpleados.Add(new EmpleadoBase
                 {
-                    IdEmpleado = 1000,
+                    IdEmpleado = 1001,
                     Legajo = 151,
                     Nombre = "Ignacio",
                     Apellido = "Pezzoli",
@@ -83,7 +99,7 @@
                 });
                 listEmpleados.Add(new EmpleadoBase
                 {
-                    IdEmpleado = 1000,
+                    IdEmpleado = 1002,
                     Legajo = 152,
                     Nombre = "Lidia",
                     Apellido = "Ramirez",
@@ -92,7 +108,7 @@
                 });
                 listEmpleados.Add(new EmpleadoBase
                 {
-                    IdEmpleado = 1000,
+                    IdEmpleado = 1003,
                     Legajo = 153,
                     Nombre = "Esteban",
                     Apellido = "Kenia",
@@ -101,7 +117,7 @@
                 });
                 listEmpleados.Add(new EmpleadoBase
                 {
-                    IdEmpleado = 1000,
+                    IdEmpleado = 1004,
                     Legajo = 154,
                     Nombre = "Cristian",
                     Apellido = "Scarfo",
@@ -114,6 +130,84 @@
                 throw ex;
             }
             return listEmpleados;
+        }
+
+        public string EliminarAuto(int idAuto)
+        {
+            try
+            {
+            
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return String.Empty;
+        }
+
+        public string CrearAuto()
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return String.Empty;
+        }
+
+        public string EditarAuto(int idAuto)
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return String.Empty;
+        }
+
+        public string EliminarEmpleado(int idEmpleado)
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return String.Empty;
+        }
+
+        public string CrearEmpleado()
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return String.Empty;
+        }
+
+        public string EditarEmpleado(int idEmpleado)
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return String.Empty;
         }
     }
 }

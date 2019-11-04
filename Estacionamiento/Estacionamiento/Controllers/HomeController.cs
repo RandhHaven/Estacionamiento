@@ -50,20 +50,6 @@ namespace Estacionamiento.Controllers
             return View(listaAutos);
         }
 
-        [HttpPost]
-        public ActionResult ViewAutos(int idAuto)
-        {           
-            try
-            {               
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex.Message);
-                throw ex;
-            }
-            return View();
-        }
-
         [HttpGet]
         public ActionResult ViewEmpleados()
         {
@@ -81,6 +67,20 @@ namespace Estacionamiento.Controllers
         }
 
         [HttpGet]
+        public ActionResult ViewEditarEmpleado()
+        {
+            try
+            {
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+                throw ex;
+            }
+            return View();
+        }
+
+        [HttpPost]
         public ActionResult ViewEditarEmpleado(int idEmpleado)
         {
             try
@@ -94,6 +94,7 @@ namespace Estacionamiento.Controllers
             return View();
         }
 
+        
         [HttpGet]
         public ActionResult ViewCrearEmpleado()
         {
@@ -108,7 +109,7 @@ namespace Estacionamiento.Controllers
             return View();
         }
 
-        [HttpPost]
+        [HttpGet]
         public ActionResult ViewEliminarEmpleado(int idEmpleado)
         {
             try
@@ -151,16 +152,23 @@ namespace Estacionamiento.Controllers
         }
 
         [HttpPost]
-        public ActionResult ViewEliminarAuto(int IdAuto)
+        public ActionResult ViewEliminarAuto(int idAuto)
         {
             try
             {
+                this.EliminarAuto(idAuto);
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex.Message);
                 throw ex;
             }
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult ViewEliminarAuto()
+        {
             return View();
         }
 
