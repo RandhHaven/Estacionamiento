@@ -88,7 +88,7 @@
       <Name>EntityEstacionamiento</Name>
     </ProjectReference>
     <ProjectReference Include="..\EstacionamientoCore\EstacionamientoCore.csproj">
-      <Project>{b182f344-49cd-415b-82dd-027ed716b3bb}</Project>
+      <Project>{B182F344-49CD-415B-82DD-027ED716B3BB}</Project>
       <Name>EstacionamientoCore</Name>
     </ProjectReference>
   </ItemGroup>

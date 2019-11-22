@@ -9,7 +9,7 @@
     #region Tabla
     [Table("Auto")]
     [DataContract]
-    public class Client
+    public class Auto
     {
         [Key]
         [DataMember]

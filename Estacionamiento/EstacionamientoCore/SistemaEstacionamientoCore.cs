@@ -3,6 +3,8 @@
     #region Properties
     using System;
     using System.Collections.Generic;
+    using EFEstacionamiento;
+    using EFEstacionamiento.Entity;
     using EntityEstacionamiento.Entidades;
     #endregion
 
@@ -17,10 +19,24 @@
             this.GetListadoAutos();
         }
 
+        public List<Auto> GetListAuto()
+        {
+            List<Auto> list = new List<Auto>();
+            try
+            {
+                
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return list;
+        }
+
         public List<AutoBase> GetListadoAutos()
         {
             List<AutoBase> listAutos = new List<AutoBase>();
-
+            
             try
             {
                 //unSistemaSolar.Initialize(anios);

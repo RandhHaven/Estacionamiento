@@ -1,8 +1,7 @@
-﻿using EntityEstacionamiento.Entidades;
+﻿
 using EntityEstacionamiento.Helpers;
 using EstacionamientoCore;
 using System;
-using System.Collections.Generic;
 
 namespace WsEstacionamiento
 {
@@ -14,10 +13,7 @@ namespace WsEstacionamiento
         {
             return string.Format("You entered: {0}", value);
         }
-        public string GetListadoAutos()
-        {
-            return SerializationHelper.SerializeToBinaryString(new SistemaEstacionamientoCore().GetListadoAutos());
-        }
+        public string GetListadoAutos() => SerializationHelper.SerializeToBinaryString(new SistemaEstacionamientoCore().GetListadoAutos());
 
         public string GetListadoEmpleados()
         {
