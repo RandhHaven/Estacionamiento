@@ -137,7 +137,6 @@
             {
                 throw ex;
             }
-
         }
 
         public void EliminarAuto(int idAuto)
@@ -150,7 +149,6 @@
             {
                 throw ex;
             }
-
         }
         public void EditarAuto(int idAuto)
         {            
@@ -161,8 +159,7 @@
             catch (Exception ex)
             {
                 throw ex;
-            }
-            
+            }            
         }
 
         public void CrearEmpleado()
@@ -175,7 +172,6 @@
             {
                 throw ex;
             }
-
         }
 
         public void EliminarEmpleado(int idEmpleado)
@@ -188,7 +184,6 @@
             {
                 throw ex;
             }
-
         }
         public void EditarEmpleado(int idEmpleado)
         {
@@ -200,7 +195,6 @@
             {
                 throw ex;
             }
-
         }
         #endregion
     }
