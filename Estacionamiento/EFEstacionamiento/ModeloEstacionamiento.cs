@@ -12,7 +12,7 @@ namespace EFEstacionamiento
 
         #region Constructor
         public ModeloEstacionamiento()
-           : base("name=" + "SDSNET." + System.Configuration.ConfigurationManager.AppSettings["COUNTRY"].ToString() + "." + System.Configuration.ConfigurationManager.AppSettings["INSTANCIA"].ToString())
+           : base("name=" + "SDSNET." + System.Configuration.ConfigurationManager.AppSettings["INSTANCIA"].ToString())
         {
             this.Configuration.LazyLoadingEnabled = false;
             this.Configuration.ProxyCreationEnabled = false;

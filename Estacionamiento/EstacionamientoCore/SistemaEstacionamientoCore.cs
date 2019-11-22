@@ -3,6 +3,7 @@
     #region Properties
     using System;
     using System.Collections.Generic;
+    using System.Linq;
     using EFEstacionamiento;
     using EFEstacionamiento.Entity;
     using EntityEstacionamiento.Entidades;
@@ -24,7 +25,11 @@
             List<Auto> list = new List<Auto>();
             try
             {
-                
+                using (var context = new ModeloEstacionamiento())
+                {
+                    IQueryable<Auto> rtn = from temp in context.Autos select temp;
+                    list = rtn.ToList();
+                }
             }
             catch (Exception ex)
             {

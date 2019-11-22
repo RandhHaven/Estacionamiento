@@ -48,5 +48,11 @@
     <Compile Include="Helpers\SerializationHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EFEstacionamiento\EFEstacionamiento.csproj">
+      <Project>{A5EACD00-AAF5-4525-A0F0-92DB23C45738}</Project>
+      <Name>EFEstacionamiento</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
