@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using Estacionamiento.Models;
 using Estacionamiento.Base;
 using ServicesAccess;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Estacionamiento.Controllers
 {
@@ -35,6 +36,7 @@ namespace Estacionamiento.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public ActionResult ViewAutos()
         {
             List<Auto> listaAutos = new List<Auto>();

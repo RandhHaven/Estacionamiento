@@ -13,36 +13,35 @@
     {
         [Key]
         [DataMember]
-        public int ClientId { get; set; }
+        public int AutoId { get; set; }
 
         [DataMember]
         [Required]
         [StringLength(200)]
-        public string UserName { get; set; }
+        public string Marca { get; set; }
 
         [DataMember]
         [Required]
         [StringLength(200)]
-        public string FirtName { get; set; }
+        public string Modelo { get; set; }
 
         [DataMember]
         [Required]
         [StringLength(200)]
-        public string LastName { get; set; }
+        public string DescripcionAuto { get; set; }
 
         [DataMember]
         [Required]
         [StringLength(200)]
-        public string Email { get; set; }
+        public string Patente { get; set; }
                
         [DataMember]
-        [Required]
-        public string IsSuperUser { get; set; }
+        [Required] 
+        public int EmployeeId { get; set; }
 
         [DataMember]
-        [Required]
         [StringLength(50)]
-        public string Password { get; set; }
+        public string Color { get; set; }
 
     }
     #endregion

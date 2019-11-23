@@ -24,7 +24,8 @@ namespace EFEstacionamiento
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Auto>()
-               .Property(e => e.ClientId);
+               .Property(e => e.AutoId)
+               ;
         }
         #endregion
     }

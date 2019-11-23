@@ -13,37 +13,39 @@
     {
         [Key]
         [DataMember]
-        public int ClientId { get; set; }
+        [Required]
+        [MaxLength(15)]
+        public int EmpleadoId { get; set; }
+
+        [DataMember]
+        [Required]
+        [MaxLength(10)]
+        public int Legajo { get; set; }
 
         [DataMember]
         [Required]
         [StringLength(200)]
-        public string UserName { get; set; }
+        public string UserEmpleado { get; set; }
 
         [DataMember]
         [Required]
         [StringLength(200)]
-        public string FirtName { get; set; }
+        public string Nombre { get; set; }
 
         [DataMember]
         [Required]
         [StringLength(200)]
-        public string LastName { get; set; }
+        public string Apellido { get; set; }
 
         [DataMember]
         [Required]
         [StringLength(200)]
         public string Email { get; set; }
-
-        [DataMember]
-        [Required]
-        public string IsSuperUser { get; set; }
-
+                
         [DataMember]
         [Required]
         [StringLength(50)]
-        public string Password { get; set; }
-
+        public string NroCelular { get; set; }
     }
     #endregion
 }

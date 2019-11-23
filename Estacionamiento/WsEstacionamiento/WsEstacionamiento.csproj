@@ -73,9 +73,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Configuracion\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Configuracion\appSettings.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29424.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Estacionamiento", "Estacionamiento\Estacionamiento.csproj", "{3977F2BD-4DB3-4836-9F7D-19B7929C362F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estacionamiento", "Estacionamiento\Estacionamiento.csproj", "{3977F2BD-4DB3-4836-9F7D-19B7929C362F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backend", "Backend", "{DB79874C-CAD3-40A9-88DB-D2B4BA6E6F5F}"
 EndProject
@@ -16,9 +16,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicesAccess", "ServicesA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityEstacionamiento", "EntityEstacionamiento\EntityEstacionamiento.csproj", "{9BBE993E-6D7C-41B0-BE60-E29AF1EF9925}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstacionamientoCore", "EstacionamientoCore\EstacionamientoCore.csproj", "{B182F344-49CD-415B-82DD-027ED716B3BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EstacionamientoCore", "EstacionamientoCore\EstacionamientoCore.csproj", "{B182F344-49CD-415B-82DD-027ED716B3BB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFEstacionamiento", "EFEstacionamiento\EFEstacionamiento.csproj", "{A5EACD00-AAF5-4525-A0F0-92DB23C45738}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiServiceEstacionamiento", "WebApiServiceAutos\WebApiServiceEstacionamiento.csproj", "{702263B2-DAFD-4702-80DA-858BBB26DDA4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,6 +52,10 @@ Global
 		{A5EACD00-AAF5-4525-A0F0-92DB23C45738}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5EACD00-AAF5-4525-A0F0-92DB23C45738}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5EACD00-AAF5-4525-A0F0-92DB23C45738}.Release|Any CPU.Build.0 = Release|Any CPU
+		{702263B2-DAFD-4702-80DA-858BBB26DDA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{702263B2-DAFD-4702-80DA-858BBB26DDA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{702263B2-DAFD-4702-80DA-858BBB26DDA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{702263B2-DAFD-4702-80DA-858BBB26DDA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

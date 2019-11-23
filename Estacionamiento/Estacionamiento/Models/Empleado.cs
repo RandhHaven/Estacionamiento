@@ -15,6 +15,8 @@
         public byte Edad { get; set; }
 
         public string NroCelular { get; set; }
+
+        public string Email { get; set; }
         #endregion
     }
 }
