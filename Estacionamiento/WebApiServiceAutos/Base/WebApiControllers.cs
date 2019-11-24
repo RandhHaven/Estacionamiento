@@ -9,15 +9,17 @@ namespace WebApiServiceEstacionamiento.Controllers
     public abstract class WebApiControllers : ControllerBase
     {
         #region Properties
-        private readonly ModeloEstacionamiento context;
+        public ModeloEstacionamiento context;
         #endregion
+
+
         public virtual void Save(Auto unAuto)
         {
             context.Autos.Add(unAuto);
             context.SaveChanges();
         }
 
-        public virtual IEnumerable<Auto> Get()
+        public virtual IEnumerable<Auto> GetAutos()
         {
             return context.Autos.ToList();
         }

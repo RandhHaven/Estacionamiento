@@ -1,22 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using EFEstacionamiento.Entity;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-
-namespace WebApiServiceEstacionamiento.Controllers
+﻿namespace WebApiServiceEstacionamiento.Controllers
 {
+    #region Directives
+    using System;
+    using System.Collections.Generic;
+    using EFEstacionamiento;
+    using EFEstacionamiento.Entity;
+    using Microsoft.AspNetCore.Mvc;
+    #endregion
+
+    [Produces("application/json")]
     [Route("api/[controller]")]
-    [ApiController]
     public class AutoController : WebApiControllers
     {
+        public AutoController(ModeloEstacionamiento context1)
+        {
+            this.context = context1;
+        }
+
         // GET: api/Auto
         [HttpGet]
         public IEnumerable<Auto> Get()
         {
-            return base.Get();
+            return base.GetAutos();
         }
 
         // GET: api/Auto/5
@@ -33,7 +38,6 @@ namespace WebApiServiceEstacionamiento.Controllers
             if (ModelState.IsValid)
             {
                 Save(unAuto);
-               
                 return new CreatedAtRouteResult("Get", new { id = unAuto.AutoId }, unAuto);
             }
 
@@ -50,6 +54,14 @@ namespace WebApiServiceEstacionamiento.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-        }       
+            try
+            {
+            }
+
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

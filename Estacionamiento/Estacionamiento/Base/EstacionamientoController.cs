@@ -49,7 +49,6 @@
 
         #region Methods
         public abstract void OnInitialize(ILogger<HomeController> logger);
-
        
         public List<Auto> GetAutos()
         {
@@ -82,6 +81,7 @@
             }
             return listEmpleado;
         }
+
         public void GetAutoMappping(List<AutoBase> listaBase, ref List<Auto> lista)
         {
             try
