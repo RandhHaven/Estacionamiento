@@ -8,8 +8,8 @@
     using Microsoft.AspNetCore.Mvc;
     #endregion
 
-    [Produces("application/json")]
     [Route("api/[controller]")]
+    [ApiController]
     public class AutoController : WebApiControllers
     {
         public AutoController(ModeloEstacionamiento context1)
@@ -25,10 +25,10 @@
         }
 
         // GET: api/Auto/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        [HttpGet("{id}", Name = "GetAuto")]
+        public IEnumerable<Auto> Get(int id)
         {
-            return "value";
+            return base.GetAutos();
         }
 
         // POST: api/Auto
@@ -38,7 +38,7 @@
             if (ModelState.IsValid)
             {
                 Save(unAuto);
-                return new CreatedAtRouteResult("Get", new { id = unAuto.AutoId }, unAuto);
+                return new CreatedAtRouteResult("GetAuto", new { id = unAuto.AutoId }, unAuto);
             }
 
             return BadRequest(ModelState);

@@ -1,24 +1,25 @@
 ﻿using System.Collections.Generic;
+using EFEstacionamiento.Entity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApiServiceEstacionamiento.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class EmpleadoController : ControllerBase
+    public class EmpleadoController : WebApiControllers
     {
         // GET: api/Empleado
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<Empleado> Get()
         {
-            return new string[] { "value1", "value2" };
+            return base.GetEmpleados();
         }
 
         // GET: api/Empleado/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        [HttpGet("{id}", Name = "GetEmpleado")]
+        public IEnumerable<Empleado> Get(int id)
         {
-            return "value";
+            return base.GetEmpleados();
         }
 
         // POST: api/Empleado

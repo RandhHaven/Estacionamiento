@@ -34,7 +34,6 @@ namespace Estacionamiento.Controllers
         }
 
         [HttpGet]
-        [Authorize]
         public ActionResult ViewAutos()
         {
             List<Auto> listaAutos = new List<Auto>();
