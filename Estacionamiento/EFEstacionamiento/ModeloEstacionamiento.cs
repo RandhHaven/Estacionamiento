@@ -10,7 +10,7 @@ namespace EFEstacionamiento
         public virtual DbSet<Empleado> Empleados { get; set; }
         #endregion
 
-        #region Constructor
+        #region Build
         public ModeloEstacionamiento()
            : base("name=" + "SDSNET." + System.Configuration.ConfigurationManager.AppSettings["INSTANCIA"].ToString())
         {
@@ -24,8 +24,10 @@ namespace EFEstacionamiento
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Auto>()
-               .Property(e => e.AutoId)
-               ;
+               .Property(e => e.AutoId);
+
+            modelBuilder.Entity<Empleado>()
+                .Property(e => e.EmpleadoId);
         }
         #endregion
     }

@@ -1,10 +1,12 @@
 ﻿namespace WebApiServiceEstacionamiento.Controllers
 {
+    #region Directives
     using EFEstacionamiento;
     using EFEstacionamiento.Entity;
     using Microsoft.AspNetCore.Mvc;
     using System.Collections.Generic;
     using System.Linq;
+    #endregion
 
     public abstract class WebApiControllers : ControllerBase
     {
@@ -27,6 +29,12 @@
         public virtual IEnumerable<Empleado> GetEmpleados()
         {
             return context.Empleados.ToList();
+        }
+
+        public virtual void Save(Empleado unEmpleado)
+        {
+            context.Empleados.Add(unEmpleado);
+            context.SaveChanges();
         }
         #endregion
     }

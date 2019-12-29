@@ -9,6 +9,7 @@
     using EntityEstacionamiento.Entidades;
     #endregion
 
+    #region Class Core
     public class SistemaEstacionamientoCore
     {
         public SistemaEstacionamientoCore()
@@ -231,4 +232,5 @@
             return String.Empty;
         }
     }
+    #endregion
 }

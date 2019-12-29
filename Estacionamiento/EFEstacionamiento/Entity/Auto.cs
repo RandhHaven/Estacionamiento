@@ -1,12 +1,12 @@
 ﻿namespace EFEstacionamiento.Entity
 {
-    #region Directivas
+    #region Directives
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Runtime.Serialization;
     #endregion
 
-    #region Tabla
+    #region Table
     [Table("Auto")]
     [DataContract]
     public class Auto

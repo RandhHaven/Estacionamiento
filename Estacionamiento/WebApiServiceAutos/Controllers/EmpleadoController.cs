@@ -24,8 +24,14 @@ namespace WebApiServiceEstacionamiento.Controllers
 
         // POST: api/Empleado
         [HttpPost]
-        public void Post([FromBody] string value)
+        public IActionResult Post([FromBody] Empleado unEmpleado)
         {
+            if (ModelState.IsValid)
+            {
+                Save(unEmpleado);
+                return new CreatedAtRouteResult("GetEmpleado", new { id = unEmpleado.EmpleadoId }, unEmpleado);
+            }
+            return BadRequest(ModelState);
         }
 
         // PUT: api/Empleado/5

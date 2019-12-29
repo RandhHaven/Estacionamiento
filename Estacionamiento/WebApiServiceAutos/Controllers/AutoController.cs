@@ -63,5 +63,10 @@
                 throw ex;
             }
         }
+
+        public override void Save(Auto unAuto)
+        {
+            base.Save(unAuto);
+        }
     }
 }
