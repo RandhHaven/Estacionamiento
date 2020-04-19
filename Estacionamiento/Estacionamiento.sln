@@ -20,7 +20,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EstacionamientoCore", "Esta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFEstacionamiento", "EFEstacionamiento\EFEstacionamiento.csproj", "{A5EACD00-AAF5-4525-A0F0-92DB23C45738}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiServiceEstacionamiento", "WebApiServiceAutos\WebApiServiceEstacionamiento.csproj", "{702263B2-DAFD-4702-80DA-858BBB26DDA4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiServiceEstacionamiento", "WebApiServiceAutos\WebApiServiceEstacionamiento.csproj", "{702263B2-DAFD-4702-80DA-858BBB26DDA4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EstacionamientoNetCore", "EstacionamientoNetCore\EstacionamientoNetCore.csproj", "{05AC977E-3D33-44DA-A80F-73AAAE3E64B2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EstacionamientoEF", "EstacionamientoEF\EstacionamientoEF.csproj", "{F086BC9E-2709-4099-89BD-FEF6EA82E9AF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EstacionamientoEntity", "EstacionamientoEntity\EstacionamientoEntity.csproj", "{1A5048AB-5738-4769-81D9-DAD16BA98BAD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,6 +62,18 @@ Global
 		{702263B2-DAFD-4702-80DA-858BBB26DDA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{702263B2-DAFD-4702-80DA-858BBB26DDA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{702263B2-DAFD-4702-80DA-858BBB26DDA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05AC977E-3D33-44DA-A80F-73AAAE3E64B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05AC977E-3D33-44DA-A80F-73AAAE3E64B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05AC977E-3D33-44DA-A80F-73AAAE3E64B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05AC977E-3D33-44DA-A80F-73AAAE3E64B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F086BC9E-2709-4099-89BD-FEF6EA82E9AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F086BC9E-2709-4099-89BD-FEF6EA82E9AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F086BC9E-2709-4099-89BD-FEF6EA82E9AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F086BC9E-2709-4099-89BD-FEF6EA82E9AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A5048AB-5738-4769-81D9-DAD16BA98BAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A5048AB-5738-4769-81D9-DAD16BA98BAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A5048AB-5738-4769-81D9-DAD16BA98BAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A5048AB-5738-4769-81D9-DAD16BA98BAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +84,9 @@ Global
 		{9BBE993E-6D7C-41B0-BE60-E29AF1EF9925} = {DB79874C-CAD3-40A9-88DB-D2B4BA6E6F5F}
 		{B182F344-49CD-415B-82DD-027ED716B3BB} = {DB79874C-CAD3-40A9-88DB-D2B4BA6E6F5F}
 		{A5EACD00-AAF5-4525-A0F0-92DB23C45738} = {DB79874C-CAD3-40A9-88DB-D2B4BA6E6F5F}
+		{05AC977E-3D33-44DA-A80F-73AAAE3E64B2} = {DB79874C-CAD3-40A9-88DB-D2B4BA6E6F5F}
+		{F086BC9E-2709-4099-89BD-FEF6EA82E9AF} = {DB79874C-CAD3-40A9-88DB-D2B4BA6E6F5F}
+		{1A5048AB-5738-4769-81D9-DAD16BA98BAD} = {DB79874C-CAD3-40A9-88DB-D2B4BA6E6F5F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AB68C186-E8FD-4A1B-8122-6359DCC2C84B}
