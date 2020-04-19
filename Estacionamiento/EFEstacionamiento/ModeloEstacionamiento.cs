@@ -12,7 +12,7 @@ namespace EFEstacionamiento
 
         #region Build
         public ModeloEstacionamiento()
-           : base("name=" + "SDSNET." + System.Configuration.ConfigurationManager.AppSettings["INSTANCIA"].ToString())
+           : base("name=" + "ModeloEstacionamiento")
         {
             this.Configuration.LazyLoadingEnabled = false;
             this.Configuration.ProxyCreationEnabled = false;

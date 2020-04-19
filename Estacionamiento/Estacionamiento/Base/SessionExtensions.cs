@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
-using Newtonsoft.Json;
-
-namespace Estacionamiento.Base
+﻿namespace Estacionamiento.Base
 {
+    using Microsoft.AspNetCore.Http;
+    using Newtonsoft.Json;
+
     public static class SessionExtensions
     {
         public static void SetObject(this ISession session, string key, object value)

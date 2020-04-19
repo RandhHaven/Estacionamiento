@@ -3,8 +3,8 @@
     #region Directives
     using System;
     using System.Collections.Generic;
-    using EFEstacionamiento;
-    using EFEstacionamiento.Entity;
+    using EstacionamientoEF;
+    using EstacionamientoEF.Entity;
     using Microsoft.AspNetCore.Mvc;
     #endregion
 
@@ -12,7 +12,7 @@
     [ApiController]
     public class AutoController : WebApiControllers
     {
-        public AutoController(ModeloEstacionamiento context1)
+        public AutoController(EstacionamientoModel context1)
         {
             this.context = context1;
         }
@@ -56,6 +56,7 @@
         {
             try
             {
+                //base.rem
             }
 
             catch (Exception ex)

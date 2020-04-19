@@ -34,6 +34,7 @@ namespace WebApiServiceEstacionamiento.Controllers
             })
             .ToArray();
         }
+
         // GET: api/Auto/5
         [HttpGet("{id}", Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get(int id)

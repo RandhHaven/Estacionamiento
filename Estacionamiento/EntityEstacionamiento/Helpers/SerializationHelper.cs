@@ -60,7 +60,6 @@
         /// <returns></returns>
         public static object DeserializeFromBinaryString(string str)
         {
-
             byte[] bytes = Convert.FromBase64String(str);
             MemoryStream ms = new MemoryStream(bytes, 0, bytes.Length);
             BinaryFormatter formatter = new BinaryFormatter();

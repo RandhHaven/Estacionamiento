@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <UserSecretsId>3a72bc06-7654-4e6d-b67c-ea388fadb9d3</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
@@ -20,6 +20,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EFEstacionamiento\EFEstacionamiento.csproj" />
+    <ProjectReference Include="..\EstacionamientoEF\EstacionamientoEF.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Entities\" />
   </ItemGroup>
 
 </Project>

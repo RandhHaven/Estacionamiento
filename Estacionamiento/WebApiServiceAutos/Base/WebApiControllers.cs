@@ -1,8 +1,8 @@
 ﻿namespace WebApiServiceEstacionamiento.Controllers
 {
     #region Directives
-    using EFEstacionamiento;
-    using EFEstacionamiento.Entity;
+    using EstacionamientoEF;
+    using EstacionamientoEF.Entity;
     using Microsoft.AspNetCore.Mvc;
     using System.Collections.Generic;
     using System.Linq;
@@ -11,7 +11,7 @@
     public abstract class WebApiControllers : ControllerBase
     {
         #region Properties
-        public ModeloEstacionamiento context;
+        public EstacionamientoModel context;
         #endregion
 
         #region Methods
@@ -23,7 +23,10 @@
 
         public virtual IEnumerable<Auto> GetAutos()
         {
-            return context.Autos.ToList();
+            List<Auto> list = new List<Auto>();
+            IQueryable<Auto> rtn = from temp in context.Autos select temp;
+            list = rtn.ToList();
+            return list.ToList();
         }
 
         public virtual IEnumerable<Empleado> GetEmpleados()

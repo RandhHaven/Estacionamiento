@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using EFEstacionamiento.Entity;
-using Microsoft.AspNetCore.Mvc;
-
-namespace WebApiServiceEstacionamiento.Controllers
+﻿namespace WebApiServiceEstacionamiento.Controllers
 {
+    using System.Collections.Generic;
+    using EstacionamientoEF.Entity;
+    using Microsoft.AspNetCore.Mvc;
+
     [Route("api/[controller]")]
     [ApiController]
     public class EmpleadoController : WebApiControllers
