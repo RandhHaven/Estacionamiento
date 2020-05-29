@@ -6,24 +6,29 @@
     public partial class EstacionamientoModel : DbContext
     {
         #region Tables
-        public virtual DbSet<Auto> Autos { get; set; }
-        public virtual DbSet<Empleado> Empleados { get; set; }
+        public virtual DbSet<Car> Autos { get; set; }
+        public virtual DbSet<Employee> Empleados { get; set; }
         #endregion
 
         #region Methods
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Auto>()
-              .Property(e => e.AutoId);
+            modelBuilder.Entity<Car>()
+              .Property(e => e.CarId);
 
-            modelBuilder.Entity<Empleado>()
-                .Property(e => e.EmpleadoId);
+            modelBuilder.Entity<Employee>()
+                .Property(e => e.EmployeeId);
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            base.OnConfiguring(optionsBuilder);
+            //En caso de que el contexto no este configurado, lo configuramos mediante la cadena de conexion
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseMySQL("Server=localhost;Database=postefcore;Uid=root;Pwd=root;");
+            }
         }
+
         #endregion
     }
 }

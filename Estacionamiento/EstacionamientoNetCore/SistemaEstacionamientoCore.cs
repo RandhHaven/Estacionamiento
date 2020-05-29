@@ -1,7 +1,7 @@
 ﻿namespace EstacionamientoNetCore
 {
+    #region Assemblies
     using EstacionamientoEntity.Entidades;
-    #region Properties
     using System;
     using System.Collections.Generic;
     #endregion
@@ -72,57 +72,12 @@
             return listAutos;
         }
 
-        public List<EmpleadoBase> GetListadoEmpleados()
+        public List<EstacionamientoEF.Entity.Employee> GetListadoEmpleados()
         {
-            List<EmpleadoBase> listEmpleados = new List<EmpleadoBase>();
-
+            List<EstacionamientoEF.Entity.Employee> listEmpleados = new List<EstacionamientoEF.Entity.Employee>();            
             try
             {
-                listEmpleados.Add(new EmpleadoBase
-                {
-                    IdEmpleado = 1000,
-                    Legajo = 150,
-                    Nombre = "Micaela",
-                    Apellido = "Perez",
-                    Edad = 24,
-                    NroCelular = "45341223"
-                });
-                listEmpleados.Add(new EmpleadoBase
-                {
-                    IdEmpleado = 1001,
-                    Legajo = 151,
-                    Nombre = "Ignacio",
-                    Apellido = "Pezzoli",
-                    Edad = 34,
-                    NroCelular = "023-45555443"
-                });
-                listEmpleados.Add(new EmpleadoBase
-                {
-                    IdEmpleado = 1002,
-                    Legajo = 152,
-                    Nombre = "Lidia",
-                    Apellido = "Ramirez",
-                    Edad = 27,
-                    NroCelular = "154553334"
-                });
-                listEmpleados.Add(new EmpleadoBase
-                {
-                    IdEmpleado = 1003,
-                    Legajo = 153,
-                    Nombre = "Esteban",
-                    Apellido = "Kenia",
-                    Edad = 30,
-                    NroCelular = "234443434"
-                });
-                listEmpleados.Add(new EmpleadoBase
-                {
-                    IdEmpleado = 1004,
-                    Legajo = 154,
-                    Nombre = "Cristian",
-                    Apellido = "Scarfo",
-                    Edad = 23,
-                    NroCelular = "234443434-23"
-                });
+                listEmpleados = APIS.APIEmployee.GetEmployees("", "", "Employee");
             }
             catch (Exception ex)
             {

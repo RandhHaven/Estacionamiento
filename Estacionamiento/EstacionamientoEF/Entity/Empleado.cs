@@ -7,35 +7,35 @@
     #endregion
 
     #region Tabla
-    [Table("Empleado")]
+    [Table("Employee")]
     [DataContract]
-    public class Empleado
+    public class Employee
     {
         [Key]
         [DataMember]
         [Required]
         [MaxLength(15)]
-        public int EmpleadoId { get; set; }
+        public int EmployeeId { get; set; }
 
         [DataMember]
         [Required]
         [MaxLength(10)]
-        public int Legajo { get; set; }
+        public int FileEmployee { get; set; }
 
         [DataMember]
         [Required]
         [StringLength(200)]
-        public string UserEmpleado { get; set; }
+        public string UserEmployee { get; set; }
 
         [DataMember]
         [Required]
         [StringLength(200)]
-        public string Nombre { get; set; }
+        public string NameEmployee { get; set; }
 
         [DataMember]
         [Required]
-        [StringLength(200)]
-        public string Apellido { get; set; }
+        [StringLength(100)]
+        public string Surname { get; set; }
 
         [DataMember]
         [Required]
@@ -45,7 +45,12 @@
         [DataMember]
         [Required]
         [StringLength(50)]
-        public string NroCelular { get; set; }
+        public string Mobile { get; set; }
+
+        [DataMember]
+        [Required]
+        [StringLength(50)]
+        public string Phone { get; set; }
     }
     #endregion
 }

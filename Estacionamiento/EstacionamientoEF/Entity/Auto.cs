@@ -7,13 +7,13 @@
     #endregion
 
     #region Table
-    [Table("Auto")]
+    [Table("Car")]
     [DataContract]
-    public class Auto
+    public class Car
     {
         [Key]
         [DataMember]
-        public int AutoId { get; set; }
+        public int CarId { get; set; }
 
         [DataMember]
         [Required]
@@ -23,17 +23,17 @@
         [DataMember]
         [Required]
         [StringLength(200)]
-        public string Modelo { get; set; }
+        public string Model { get; set; }
 
         [DataMember]
         [Required]
         [StringLength(200)]
-        public string DescripcionAuto { get; set; }
+        public string Description { get; set; }
 
         [DataMember]
         [Required]
-        [StringLength(200)]
-        public string Patente { get; set; }
+        [StringLength(50)]
+        public string Patent { get; set; }
 
         [DataMember]
         [Required]
@@ -41,7 +41,7 @@
 
         [DataMember]
         [StringLength(50)]
-        public string Color { get; set; }
+        public string Colour { get; set; }
 
     }
     #endregion

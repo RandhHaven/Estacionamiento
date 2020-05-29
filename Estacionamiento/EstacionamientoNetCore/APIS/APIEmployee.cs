@@ -14,19 +14,15 @@
     using System.Threading;
     using System.Threading.Tasks;
 
-    public class APIEmployee
+    public static class APIEmployee
     {
-        private readonly HttpClient httpClient;
+        private static readonly HttpClient httpClient;
 
-
-        public async Task<T> PostRequestAsync<T>(string actionPath, string content,
+        public static async Task<T> PostRequestAsync<T>(string actionPath, string content,
          RestHeaderParameter headerParam, CancellationTokenSource cancellationTokenSource, bool json)
         {
             HttpContent hc = new StringContent(content);
-            if (json)
-                hc.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-            else
-                hc.Headers.ContentType = new MediaTypeHeaderValue("application/xml");
+            hc.Headers.ContentType = (json) ? new MediaTypeHeaderValue("application/json") : new MediaTypeHeaderValue("application/xml");
 
             HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, actionPath)
             {
@@ -40,7 +36,7 @@
                 throw new TaskCanceledException("cancellationTokenSource alreday cancelled");
             }
 
-            var httpResponseMessage = await this.httpClient.SendAsync(request, cancellationTokenSource.Token);
+            var httpResponseMessage = await httpClient.SendAsync(request, cancellationTokenSource.Token);
 
             if (!httpResponseMessage.IsSuccessStatusCode)
             {
@@ -52,15 +48,12 @@
             return await Helpers.DeserializeResponseAsync<T>(actionPath, httpResponseMessage, headerParam.UserId, json);
         }
 
-        public static List<Auto> GetPay(string urlToken, string urlBase, string pathCertificate, string clientID, string clientSecret, string grantType, string usuario, string country, string nro_venta, string rut, string monto, string app)
+        public static List<Employee> GetEmployees(string urlToken, string urlBase, string app)
         {
-           
-            string importe = Convert.ToInt64(Math.Round(Convert.ToDouble(monto))).ToString();
-            int index = rut.IndexOf('-');
-            string rut_sin_guion = index > 0 ? rut.Substring(0, index) + rut.Substring(index + 1, rut.Length - (index + 1)) : rut;
-            Empleado request = new Empleado();
-            Auto response = new Auto();
-            List<Auto> listAuto = new List<Auto>();
+
+            Employee request = new Employee();
+            Employee response = new Employee();
+            List<Employee> listEmployee = new List<Employee>();
             try
             {
                 Uri url = new Uri(urlBase);
@@ -70,8 +63,6 @@
                 using (var certHandler = HttpMessageHandlerFactory.Create(cert))
                 using (var client = new HttpClient(certHandler))
                 {
-                    client.DefaultRequestHeaders.Add("Metadata-UserId", usuario);
-                    client.DefaultRequestHeaders.Add("Metadata-SenderCountry", country);
                     client.DefaultRequestHeaders.Add("Metadata-RequestId", new Random().Next(999999).ToString(CultureInfo.InvariantCulture));
                     client.DefaultRequestHeaders.Add("Metadata-SystemId", app);
                     client.DefaultRequestHeaders.Add("Metadata-SenderBusinessScope", "SDS");
@@ -82,15 +73,15 @@
 
                     if (result.IsSuccessStatusCode)
                     {
-                        response = JsonConvert.DeserializeObject<Auto>(result.Content.ReadAsStringAsync().Result);
+                        response = JsonConvert.DeserializeObject<Employee>(result.Content.ReadAsStringAsync().Result);
                     }
                     else
                     {
                         string resultJson = result.Content.ReadAsStringAsync().Result;                        
                     }
                 }
-                listAuto.Add(response);
-                return listAuto;
+                listEmployee.Add(response);
+                return listEmployee;
             }
             catch (Exception ex)
             {
@@ -101,7 +92,6 @@
         public static X509Certificate2 FindCertificateByThumbprint(string findValue)
         {
             var store = new X509Store(StoreName.My, StoreLocation.CurrentUser);
-
             try
             {
                 store.Open(OpenFlags.ReadOnly);
