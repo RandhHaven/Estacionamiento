@@ -19,26 +19,26 @@
 
         // GET: api/Auto
         [HttpGet]
-        public IEnumerable<Auto> Get()
+        public IEnumerable<Car> Get()
         {
             return base.GetAutos();
         }
 
         // GET: api/Auto/5
         [HttpGet("{id}", Name = "GetAuto")]
-        public IEnumerable<Auto> Get(int id)
+        public IEnumerable<Car> Get(int id)
         {
             return base.GetAutos();
         }
 
         // POST: api/Auto
         [HttpPost]
-        public IActionResult Post([FromBody] Auto unAuto)
+        public IActionResult Post([FromBody] Car unAuto)
         {
             if (ModelState.IsValid)
             {
                 Save(unAuto);
-                return new CreatedAtRouteResult("GetAuto", new { id = unAuto.AutoId }, unAuto);
+                return new CreatedAtRouteResult("GetAuto", new { id = unAuto.CarId }, unAuto);
             }
 
             return BadRequest(ModelState);
@@ -65,7 +65,7 @@
             }
         }
 
-        public override void Save(Auto unAuto)
+        public override void Save(Car unAuto)
         {
             base.Save(unAuto);
         }

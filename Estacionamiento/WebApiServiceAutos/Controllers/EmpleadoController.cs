@@ -10,26 +10,26 @@
     {
         // GET: api/Empleado
         [HttpGet]
-        public IEnumerable<Empleado> Get()
+        public IEnumerable<Employee> Get()
         {
             return base.GetEmpleados();
         }
 
         // GET: api/Empleado/5
         [HttpGet("{id}", Name = "GetEmpleado")]
-        public IEnumerable<Empleado> Get(int id)
+        public IEnumerable<Employee> Get(int id)
         {
             return base.GetEmpleados();
         }
 
         // POST: api/Empleado
         [HttpPost]
-        public IActionResult Post([FromBody] Empleado unEmpleado)
+        public IActionResult Post([FromBody] Employee unEmpleado)
         {
             if (ModelState.IsValid)
             {
                 Save(unEmpleado);
-                return new CreatedAtRouteResult("GetEmpleado", new { id = unEmpleado.EmpleadoId }, unEmpleado);
+                return new CreatedAtRouteResult("GetEmpleado", new { id = unEmpleado.EmployeeId }, unEmpleado);
             }
             return BadRequest(ModelState);
         }

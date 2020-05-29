@@ -15,26 +15,26 @@
         #endregion
 
         #region Methods
-        public virtual void Save(Auto unAuto)
+        public virtual void Save(Car unAuto)
         {
             context.Autos.Add(unAuto);
             context.SaveChanges();
         }
 
-        public virtual IEnumerable<Auto> GetAutos()
+        public virtual IEnumerable<Car> GetAutos()
         {
-            List<Auto> list = new List<Auto>();
-            IQueryable<Auto> rtn = from temp in context.Autos select temp;
+            List<Car> list = new List<Car>();
+            IQueryable<Car> rtn = from temp in context.Autos select temp;
             list = rtn.ToList();
             return list.ToList();
         }
 
-        public virtual IEnumerable<Empleado> GetEmpleados()
+        public virtual IEnumerable<Employee> GetEmpleados()
         {
             return context.Empleados.ToList();
         }
 
-        public virtual void Save(Empleado unEmpleado)
+        public virtual void Save(Employee unEmpleado)
         {
             context.Empleados.Add(unEmpleado);
             context.SaveChanges();

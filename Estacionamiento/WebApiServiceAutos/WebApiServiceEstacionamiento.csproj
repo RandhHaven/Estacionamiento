@@ -19,12 +19,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EFEstacionamiento\EFEstacionamiento.csproj" />
-    <ProjectReference Include="..\EstacionamientoEF\EstacionamientoEF.csproj" />
+    <Folder Include="Entities\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Entities\" />
+    <ProjectReference Include="..\EstacionamientoEF\EstacionamientoEF.csproj" />
   </ItemGroup>
 
 </Project>
